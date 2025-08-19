@@ -16,9 +16,23 @@ It has been tested with the following boards:
 
 but it is probably working with other variants (to be tested).
 
+**Note:** Wifi is not supported yet.
+
 ## Usage
 
-The streamming URI to use is written on the HDMI output display.
+Download the image from the releases page.
+
+To flash it, you can use [RaspberryPi Imager](https://www.raspberrypi.com/software/),
+and provide the NoSignal image by selecting a custom OS image.
+
+You can customize the system, but **do not define an user** as NoSignal image
+already defined one.
+
+The first boot time, there is an automatic configuration step, which may take a
+while.
+
+Once booted, the streamming URI to use is written on the HDMI display, under
+the "No Signal" logo.
 
 ### Share PC screen with OBS Studio
 
