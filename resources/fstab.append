@@ -1,0 +1,4 @@
+none                  /tmp               tmpfs   size=128M,mode=01777                    0 0
+none                  /var/tmp           tmpfs   size=16M                                0 0
+none                  /var/log/nginx     tmpfs   size=16M,mode=0777                      0 0
+none                  /var/lib/logrotate tmpfs  size=1M                                  0 0

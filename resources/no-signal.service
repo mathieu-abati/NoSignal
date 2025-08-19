@@ -1,0 +1,10 @@
+[Unit]
+Description=No signal display
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/opt/no_signal/no_signal.sh
+
+[Install]
+WantedBy=sysinit.target

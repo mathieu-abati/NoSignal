@@ -1,0 +1,12 @@
+[Unit]
+Description=Set HDMI as default audio device
+After=alsa-restore.service sound.target
+Requires=alsa-restore.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/no_signal/configure_audio.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
