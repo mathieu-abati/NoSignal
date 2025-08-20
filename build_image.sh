@@ -133,11 +133,12 @@ EOF
 popd
 
 echo -e "\e[34mConfiguring...\e[39m"
-sudo touch ${TMPDIR}/boot/ssh
-sudo cp resources/userconf.txt ${TMPDIR}/boot/
+pushd ${TMPDIR}
+sudo chroot root /bin/bash <<'EOF'
+/usr/sbin/useradd -r -M -s /usr/sbin/nologin -G adm,video,audio,input,plugdev -d /opt/no_signal nosignal
+EOF
+popd
 sudo sed -i 's/user www-data/user nosignal/' ${TMPDIR}/root/etc/nginx/nginx.conf
-sudo cp resources/rc.local ${TMPDIR}/root/etc/
-sudo chmod +x ${TMPDIR}/root/etc/rc.local
 sudo sed -i 's/worker_processes auto;/worker_processes 1;/' ${TMPDIR}/root/etc/nginx/nginx.conf
 cat resources/rtmp.conf | sudo tee -a ${TMPDIR}/root/etc/nginx/nginx.conf
 sudo cp resources/no-signal.service resources/config-audio.service ${TMPDIR}/root/etc/systemd/system/
@@ -150,7 +151,7 @@ echo "d /var/log/nginx 0777 nosignal www-data -" | sudo tee -a ${TMPDIR}/root/us
 echo "NoSignal" | sudo tee ${TMPDIR}/root/etc/hostname
 pushd ${TMPDIR}
 sudo chroot root /bin/bash <<'EOF'
-systemctl disable nginx # will be enabled by rc.local, so after user creation
+systemctl enable nginx
 systemctl enable no-signal
 systemctl enable config-audio
 #systemctl disable dphys-swapfile.service

@@ -1,5 +1,6 @@
 [Unit]
-Description=No signal display
+Description=No Signal display
+After=userconfig.service
 DefaultDependencies=no
 
 [Service]

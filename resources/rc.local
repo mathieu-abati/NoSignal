@@ -1,8 +1,0 @@
-#!/bin/sh -e
-
-if [ -f /boot/firmware/cmdline.txt ]; then
-	systemctl enable nginx
-	systemctl start nginx
-	sed -i '1s/$/ quiet logo.nologo loglevel=3/' /boot/firmware/cmdline.txt
-	rm /etc/rc.local
-fi
