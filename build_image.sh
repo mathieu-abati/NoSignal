@@ -135,7 +135,7 @@ popd
 echo -e "\e[34mConfiguring...\e[39m"
 pushd ${TMPDIR}
 sudo chroot root /bin/bash <<'EOF'
-/usr/sbin/useradd -r -M -s /usr/sbin/nologin -G adm,video,audio,input,plugdev -d /opt/no_signal nosignal
+/usr/sbin/useradd -r -M -s /usr/sbin/nologin -G adm,video,audio,render,input,plugdev -d /opt/no_signal nosignal
 EOF
 popd
 sudo sed -i 's/user www-data/user nosignal/' ${TMPDIR}/root/etc/nginx/nginx.conf
