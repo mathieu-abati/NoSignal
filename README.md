@@ -16,8 +16,6 @@ It has been tested with the following boards:
 
 but it is probably working with other variants (to be tested).
 
-**Note:** Wifi is not supported yet.
-
 ## Usage
 
 Download the image from the releases page.
