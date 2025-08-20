@@ -25,14 +25,18 @@ Download the image from the releases page.
 To flash it, you can use [RaspberryPi Imager](https://www.raspberrypi.com/software/),
 and provide the NoSignal image by selecting a custom OS image.
 
-You can customize the system, but **do not define an user** as NoSignal image
-already defined one.
+[RaspberryPi Imager](https://www.raspberrypi.com/software/) allows you to
+customize the system, for example to create your user, enable SSH access,
+and configure Wifi.
 
-The first boot time, there is an automatic configuration step, which may take a
-while.
+Then, the first boot time, there is an automatic configuration step, which may
+take a while, and if not previously done from
+[RaspberryPi Imager](https://www.raspberrypi.com/software/), you will be asked
+to configure keyboard layout and to create your user account.
 
 Once booted, the streamming URI to use is written on the HDMI display, under
-the "No Signal" logo.
+the "No Signal" logo. The IP address shown there is the Ethernet address in
+priority, else the Wifi address.
 
 ### Share PC screen with OBS Studio
 
@@ -141,7 +145,4 @@ sync
 
 ### Debugging
 
-You can gain shell access through SSH, or locally (CTRL + ALT + F1):
-
-- login: nosignal
-- password: nosignal
+You can gain shell access by pressing `Enter`, or through SSH if enabled.
