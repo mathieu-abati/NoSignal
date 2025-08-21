@@ -16,6 +16,9 @@ It has been tested with the following boards:
 
 but it is probably working with other variants (to be tested).
 
+You can expect 3 - 4 seconds latency between the source device and the NoSignal
+display.
+
 ## Usage
 
 Download the image from the releases page.
