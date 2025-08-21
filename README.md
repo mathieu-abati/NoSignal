@@ -78,6 +78,18 @@ From the main screen, in the `Sources` area add a `Screen Capture` source.
 
 You can now click on `Start streaming`.
 
+### Share an Android smartphone screen with Larix Screencaster
+
+Install [Larix
+Screencaster](https://play.google.com/store/apps/details?id=com.wmspanel.larix_screencaster)
+from the Play Store.
+
+Then, from the application, go to parameters, and add a Connection, setting it
+the URI displayed by NoSignal on your TV. Your smartphone then need to be
+connected on your home network.
+
+Then, from the application main page, click on `Start` to begin streaming.
+
 ### Play video with ffmpeg
 
 Replace below `<my_video_file>` and `<no_signal_ip_address>`:
