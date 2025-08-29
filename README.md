@@ -13,6 +13,7 @@ It has been tested with the following boards:
 | RaspberryPi 3 Model B  | ✅     | ✅      | Perfectly working                       |
 | RaspberryPi 3 Model B+ | ✅     | ✅      | Perfectly working                       |
 | RaspberryPi 4 2GB      | ✅     | ✅      | Perfectly working                       |
+| RaspberryPi 5 2GB      | ✅     | ❌      | No sound                                |
 
 but it is probably working with other variants (to be tested).
 
